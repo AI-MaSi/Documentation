@@ -37,17 +37,3 @@ graph TD
     L -->|HTTP GET Control Data| H
     P -->|HTTP POST Control Data| L
     L -->|HTTP GET Sensor Data| Q
-
-    subgraph Excavator Components
-        C
-        D
-        E
-        F
-    end
-    subgraph Communication
-        G
-        H
-        L
-        P
-        Q
-    end
