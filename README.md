@@ -17,7 +17,6 @@ graph TD
         E -->|IMU Data| B
         F -->|RPM Data| B
     end
-
     subgraph Motion Platform System
         M[Motion Platform Main] --> N[MotionPlatformClient]
         N --> O[NiDAQ Controller]
@@ -26,20 +25,18 @@ graph TD
         N --> R[Process Received Data]
         O -->|Joystick Data| N
     end
-
     subgraph Server System
         I[Server Main] --> J[DataExchangeServer]
         J --> K[ThreadingHTTPServer]
         K --> L[RequestHandler]
     end
-
     G -->|HTTP POST Sensor Data| L
     L -->|HTTP GET Control Data| H
     P -->|HTTP POST Control Data| L
     L -->|HTTP GET Sensor Data| Q
+```
 
-
-"""mermaid
+```mermaid
 graph TD
     A[Raspberry Pi] --> D[ADC HAT]
     D --> C[PWM HAT]
@@ -73,3 +70,4 @@ graph TD
     classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px
     classDef infoText fill:#e6f2ff,stroke:#333,stroke-width:1px
     class K,I,J,L infoText
+```
