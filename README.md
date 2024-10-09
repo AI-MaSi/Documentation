@@ -38,8 +38,6 @@ graph TD
     P -->|HTTP POST Control Data| L
     L -->|HTTP GET Sensor Data| Q
 
-"""
-
 
 """mermaid
 graph TD
